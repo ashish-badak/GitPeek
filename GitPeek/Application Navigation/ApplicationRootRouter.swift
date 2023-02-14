@@ -5,10 +5,23 @@
 //  Created by Ashish Badak on 14/02/23.
 //
 
-import Foundation
+import UIKit
 
 final class ApplicationRootRouter {
     // - TODO: Define dependancies: window
+    private weak var window: UIWindow?
+    let rootViewController: UINavigationController
+
+    init(window: UIWindow) {
+        self.window = window
+        rootViewController = UINavigationController()
+    }
     
-    // - TODO: Build root screen and show
+    func root() {
+        let module = PullRequestListModule()
+        let controller = module.build()
+        rootViewController.viewControllers = [controller]
+        window?.rootViewController = rootViewController
+        window?.makeKeyAndVisible()
+    }
 }

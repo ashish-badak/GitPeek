@@ -10,6 +10,6 @@ import UIKit
 final class PullRequestListModule {
     func build() -> UIViewController {
         // - TODO: create proper view controller with required dependancies
-        return UIViewController()
+        return PullRequestListViewController()
     }
 }
