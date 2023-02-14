@@ -56,15 +56,95 @@
 		1E4074E3299BD531001F3937 /* GitPeek */ = {
 			isa = PBXGroup;
 			children = (
-				1E4074E4299BD531001F3937 /* AppDelegate.swift */,
-				1E4074E6299BD531001F3937 /* SceneDelegate.swift */,
+				1EB62EB9299BD634003E948E /* App Startup */,
+				1EB62EBF299BD8D1003E948E /* Application Navigation */,
+				1EB62EC0299BD8DF003E948E /* Networking */,
+				1EB62EC1299BD8E9003E948E /* Utils */,
+				1EB62EBA299BD850003E948E /* Pull Request */,
 				1E4074E8299BD531001F3937 /* ViewController.swift */,
 				1E4074EA299BD531001F3937 /* Main.storyboard */,
+				1EB62EC2299BD907003E948E /* Support Files */,
+			);
+			path = GitPeek;
+			sourceTree = "<group>";
+		};
+		1EB62EB9299BD634003E948E /* App Startup */ = {
+			isa = PBXGroup;
+			children = (
+				1E4074E4299BD531001F3937 /* AppDelegate.swift */,
+				1E4074E6299BD531001F3937 /* SceneDelegate.swift */,
+			);
+			path = "App Startup";
+			sourceTree = "<group>";
+		};
+		1EB62EBA299BD850003E948E /* Pull Request */ = {
+			isa = PBXGroup;
+			children = (
+				1EB62EBE299BD8B4003E948E /* Entities */,
+				1EB62EBD299BD8A4003E948E /* Presenter */,
+				1EB62EBC299BD897003E948E /* Interactor */,
+				1EB62EBB299BD87E003E948E /* Views */,
+			);
+			path = "Pull Request";
+			sourceTree = "<group>";
+		};
+		1EB62EBB299BD87E003E948E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1EB62EBC299BD897003E948E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1EB62EBD299BD8A4003E948E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1EB62EBE299BD8B4003E948E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1EB62EBF299BD8D1003E948E /* Application Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Application Navigation";
+			sourceTree = "<group>";
+		};
+		1EB62EC0299BD8DF003E948E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1EB62EC1299BD8E9003E948E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1EB62EC2299BD907003E948E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
 				1E4074ED299BD533001F3937 /* Assets.xcassets */,
 				1E4074EF299BD533001F3937 /* LaunchScreen.storyboard */,
 				1E4074F2299BD533001F3937 /* Info.plist */,
 			);
-			path = GitPeek;
+			path = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5N4LHF5GU6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitPeek/Info.plist;
+				INFOPLIST_FILE = "GitPeek/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +401,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5N4LHF5GU6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GitPeek/Info.plist;
+				INFOPLIST_FILE = "GitPeek/Support Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
