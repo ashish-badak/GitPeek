@@ -8,7 +8,6 @@
 import Foundation
 
 typealias Parameters = [String: Any]
-typealias HTTPHeaders = [String: String]
 
 protocol APIRequestData {
     var baseURL: URL { get }
