@@ -20,6 +20,7 @@
 		1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62ED9299C2093003E948E /* HTTPMethod.swift */; };
 		1EB62EDD299C20F6003E948E /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EDC299C20F6003E948E /* ParameterEncoder.swift */; };
 		1EB62EDF299C2156003E948E /* APIRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EDE299C2156003E948E /* APIRequestData.swift */; };
+		1EB62EE1299C225B003E948E /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EE0299C225B003E948E /* URLParameterEncoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		1EB62ED9299C2093003E948E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		1EB62EDC299C20F6003E948E /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		1EB62EDE299C2156003E948E /* APIRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestData.swift; sourceTree = "<group>"; };
+		1EB62EE0299C225B003E948E /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1EB62EDC299C20F6003E948E /* ParameterEncoder.swift */,
+				1EB62EE0299C225B003E948E /* URLParameterEncoder.swift */,
 			);
 			path = Encoders;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */,
 				1EB62ED8299C1937003E948E /* URLExtension.swift in Sources */,
 				1EB62ECF299BF8B4003E948E /* PullRequestListInteractor.swift in Sources */,
+				1EB62EE1299C225B003E948E /* URLParameterEncoder.swift in Sources */,
 				1EB62EDF299C2156003E948E /* APIRequestData.swift in Sources */,
 				1EB62EDD299C20F6003E948E /* ParameterEncoder.swift in Sources */,
 				1EB62ED3299BFB37003E948E /* ApplicationRootRouter.swift in Sources */,
