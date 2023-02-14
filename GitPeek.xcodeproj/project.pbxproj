@@ -13,6 +13,12 @@
 		1E4074EC299BD531001F3937 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074EA299BD531001F3937 /* Main.storyboard */; };
 		1E4074EE299BD533001F3937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074ED299BD533001F3937 /* Assets.xcassets */; };
 		1E4074F1299BD533001F3937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074EF299BD533001F3937 /* LaunchScreen.storyboard */; };
+		1EB62EC5299BE65D003E948E /* PullRequestListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EC4299BE65D003E948E /* PullRequestListModule.swift */; };
+		1EB62EC7299BF113003E948E /* PullRequestModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EC6299BF113003E948E /* PullRequestModuleProtocols.swift */; };
+		1EB62ECD299BF875003E948E /* PullRequestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62ECC299BF875003E948E /* PullRequestListViewController.swift */; };
+		1EB62ECF299BF8B4003E948E /* PullRequestListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62ECE299BF8B4003E948E /* PullRequestListInteractor.swift */; };
+		1EB62ED1299BF95A003E948E /* PullRequestListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62ED0299BF95A003E948E /* PullRequestListPresenter.swift */; };
+		1EB62ED3299BFB37003E948E /* ApplicationRootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62ED2299BFB37003E948E /* ApplicationRootRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		1E4074ED299BD533001F3937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E4074F0299BD533001F3937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E4074F2299BD533001F3937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB62EC4299BE65D003E948E /* PullRequestListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListModule.swift; sourceTree = "<group>"; };
+		1EB62EC6299BF113003E948E /* PullRequestModuleProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestModuleProtocols.swift; sourceTree = "<group>"; };
+		1EB62ECC299BF875003E948E /* PullRequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListViewController.swift; sourceTree = "<group>"; };
+		1EB62ECE299BF8B4003E948E /* PullRequestListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListInteractor.swift; sourceTree = "<group>"; };
+		1EB62ED0299BF95A003E948E /* PullRequestListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestListPresenter.swift; sourceTree = "<group>"; };
+		1EB62ED2299BFB37003E948E /* ApplicationRootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRootRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,8 @@
 				1EB62EBD299BD8A4003E948E /* Presenter */,
 				1EB62EBC299BD897003E948E /* Interactor */,
 				1EB62EBB299BD87E003E948E /* Views */,
+				1EB62EC4299BE65D003E948E /* PullRequestListModule.swift */,
+				1EB62EC6299BF113003E948E /* PullRequestModuleProtocols.swift */,
 			);
 			path = "Pull Request";
 			sourceTree = "<group>";
@@ -91,6 +105,7 @@
 		1EB62EBB299BD87E003E948E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1EB62ECC299BF875003E948E /* PullRequestListViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +113,7 @@
 		1EB62EBC299BD897003E948E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1EB62ECE299BF8B4003E948E /* PullRequestListInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -105,6 +121,7 @@
 		1EB62EBD299BD8A4003E948E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1EB62ED0299BF95A003E948E /* PullRequestListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -119,6 +136,7 @@
 		1EB62EBF299BD8D1003E948E /* Application Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				1EB62ED2299BFB37003E948E /* ApplicationRootRouter.swift */,
 			);
 			path = "Application Navigation";
 			sourceTree = "<group>";
@@ -218,9 +236,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB62EC7299BF113003E948E /* PullRequestModuleProtocols.swift in Sources */,
 				1E4074E9299BD531001F3937 /* ViewController.swift in Sources */,
 				1E4074E5299BD531001F3937 /* AppDelegate.swift in Sources */,
+				1EB62ED1299BF95A003E948E /* PullRequestListPresenter.swift in Sources */,
+				1EB62EC5299BE65D003E948E /* PullRequestListModule.swift in Sources */,
 				1E4074E7299BD531001F3937 /* SceneDelegate.swift in Sources */,
+				1EB62ECD299BF875003E948E /* PullRequestListViewController.swift in Sources */,
+				1EB62ECF299BF8B4003E948E /* PullRequestListInteractor.swift in Sources */,
+				1EB62ED3299BFB37003E948E /* ApplicationRootRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
