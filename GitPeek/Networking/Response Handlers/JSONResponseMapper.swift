@@ -20,3 +20,9 @@ struct JSONResponseMapper<Output: Decodable>: ResponseMapper {
         }
     }
 }
+
+extension JSONResponseMapper {
+    init() {
+        self.init(decoder: .default)
+    }
+}
