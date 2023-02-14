@@ -19,8 +19,7 @@ struct URLParameterEncoder: ParameterEncoder {
         guard let url = urlRequest.url,
               var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false)
         else {
-            // - TODO: Throw invalid URL error
-            return
+            throw APIRequestError.invalidURL
         }
 
         urlComponents.queryItems = parameters.map {
