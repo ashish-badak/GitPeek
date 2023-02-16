@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2D70ED299E190F0045514C /* PRListAPIRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D70EC299E190F0045514C /* PRListAPIRequestData.swift */; };
 		1E4074E5299BD531001F3937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4074E4299BD531001F3937 /* AppDelegate.swift */; };
 		1E4074EE299BD533001F3937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074ED299BD533001F3937 /* Assets.xcassets */; };
 		1E4074F1299BD533001F3937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074EF299BD533001F3937 /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E2D70EC299E190F0045514C /* PRListAPIRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestData.swift; sourceTree = "<group>"; };
 		1E4074E1299BD531001F3937 /* GitPeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitPeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4074E4299BD531001F3937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4074ED299BD533001F3937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E2D70EB299E18E40045514C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1E2D70EC299E190F0045514C /* PRListAPIRequestData.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		1E4074D8299BD531001F3937 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		1EB62EBA299BD850003E948E /* Pull Request */ = {
 			isa = PBXGroup;
 			children = (
+				1E2D70EB299E18E40045514C /* Service */,
 				1EB62EBE299BD8B4003E948E /* Entities */,
 				1EB62EBD299BD8A4003E948E /* Presenter */,
 				1EB62EBC299BD897003E948E /* Interactor */,
@@ -343,6 +354,7 @@
 				1EAFEFA0299D576500BC0778 /* RestClient.swift in Sources */,
 				1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */,
 				1EB62ED8299C1937003E948E /* URLExtension.swift in Sources */,
+				1E2D70ED299E190F0045514C /* PRListAPIRequestData.swift in Sources */,
 				1EAFEF96299D379A00BC0778 /* APIResponseValidator.swift in Sources */,
 				1EB62ECF299BF8B4003E948E /* PullRequestListInteractor.swift in Sources */,
 				1EB62EE1299C225B003E948E /* URLParameterEncoder.swift in Sources */,
