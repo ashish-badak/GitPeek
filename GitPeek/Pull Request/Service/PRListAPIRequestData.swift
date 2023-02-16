@@ -9,7 +9,7 @@ import Foundation
 
 struct PRListAPIRequestData: GetAPIRequestData {
     var path: String {
-        "repos/\(owner)/\(repoName)/pulls"
+        "repos/\(owner)/\(repo)/pulls"
     }
     
     var parameters: Parameters {
@@ -17,7 +17,7 @@ struct PRListAPIRequestData: GetAPIRequestData {
         return queryParams.data?.dictionary ?? [:]
     }
     
+    let repo: String
     let owner: String
-    let repoName: String
     let page: Int
 }
