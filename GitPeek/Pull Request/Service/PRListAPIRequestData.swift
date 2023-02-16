@@ -13,7 +13,7 @@ struct PRListAPIRequestData: GetAPIRequestData {
     }
     
     var parameters: Parameters {
-        let queryParams = PaginatedQueryParamsProvider(page: page)
+        let queryParams = PaginationQueryParams(page: page)
         return queryParams.data?.dictionary ?? [:]
     }
     
