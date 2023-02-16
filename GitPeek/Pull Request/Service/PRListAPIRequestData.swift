@@ -13,11 +13,12 @@ struct PRListAPIRequestData: GetAPIRequestData {
     }
     
     var parameters: Parameters {
-        let queryParams = PaginationQueryParams(page: page)
+        let queryParams = PRListAPIRequestQueryParams(page: page, state: state)
         return queryParams.data?.dictionary ?? [:]
     }
     
     let repo: String
     let owner: String
     let page: Int
+    var state: PullRequest.State? = nil
 }
