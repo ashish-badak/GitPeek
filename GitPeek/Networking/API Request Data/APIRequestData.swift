@@ -21,3 +21,10 @@ protocol APIRequestData {
 extension APIRequestData {
     var baseURL: URL { URL.GP.baseURL }
 }
+
+protocol GetAPIRequestData: APIRequestData {}
+
+extension GetAPIRequestData {
+    var httpMethod: HTTPMethod { .get }
+    var encoder: ParameterEncoder { URLParameterEncoder() }
+}
