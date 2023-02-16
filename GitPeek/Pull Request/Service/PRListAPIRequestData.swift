@@ -7,14 +7,10 @@
 
 import Foundation
 
-struct PRListAPIRequestData: APIRequestData {
+struct PRListAPIRequestData: GetAPIRequestData {
     var path: String {
         "repos/\(owner)/\(repoName)/pulls"
     }
-    
-    var httpMethod: HTTPMethod { .get }
-    var encoder: ParameterEncoder { URLParameterEncoder() }
-    
     var queryParams: PaginatedQueryParamsProvider { .init(page: page) }
     var parameters: Parameters { queryParams.getQueryParameters() }
     
