@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E2D70ED299E190F0045514C /* PRListAPIRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D70EC299E190F0045514C /* PRListAPIRequestData.swift */; };
+		1E2D70F1299E3A390045514C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2D70F0299E3A390045514C /* User.swift */; };
 		1E4074E5299BD531001F3937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4074E4299BD531001F3937 /* AppDelegate.swift */; };
 		1E4074EE299BD533001F3937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074ED299BD533001F3937 /* Assets.xcassets */; };
 		1E4074F1299BD533001F3937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074EF299BD533001F3937 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1E2D70EC299E190F0045514C /* PRListAPIRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestData.swift; sourceTree = "<group>"; };
+		1E2D70F0299E3A390045514C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1E4074E1299BD531001F3937 /* GitPeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitPeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E4074E4299BD531001F3937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E4074ED299BD533001F3937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +87,22 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		1E2D70F2299E3D3D0045514C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1E2D70F3299E3D4A0045514C /* Entities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1E2D70F3299E3D4A0045514C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1E2D70F0299E3A390045514C /* User.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		1E4074D8299BD531001F3937 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,7 @@
 		1E4074E3299BD531001F3937 /* GitPeek */ = {
 			isa = PBXGroup;
 			children = (
+				1E2D70F2299E3D3D0045514C /* Common */,
 				1EB62EB9299BD634003E948E /* App Startup */,
 				1EB62EBF299BD8D1003E948E /* Application Navigation */,
 				1EB62EC0299BD8DF003E948E /* Networking */,
@@ -344,6 +363,7 @@
 				1EB62EE9299C28DF003E948E /* PaginatedQueryParamsProvider.swift in Sources */,
 				1EB62EE4299C2460003E948E /* APIRequestError.swift in Sources */,
 				1EB62EE7299C2761003E948E /* QueryParamsProvider.swift in Sources */,
+				1E2D70F1299E3A390045514C /* User.swift in Sources */,
 				1EB62EEC299C296B003E948E /* ResponseMapper.swift in Sources */,
 				1EB62EC7299BF113003E948E /* PullRequestModuleProtocols.swift in Sources */,
 				1E4074E5299BD531001F3937 /* AppDelegate.swift in Sources */,
