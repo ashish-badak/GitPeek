@@ -7,18 +7,10 @@
 
 import Foundation
 
-class PaginatedQueryParamsProvider: QueryParamsProvider {
+class PaginatedQueryParamsProvider: Encodable {
     var page: Int
     
     init(page: Int) {
         self.page = page
-    }
-    
-    enum Keys {
-        static var page: String { "page" }
-    }
-    
-    func getQueryParameters() -> Parameters {
-        return [Keys.page: page]
     }
 }
