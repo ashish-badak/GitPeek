@@ -18,6 +18,7 @@
 		1E7549FF299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */; };
 		1E754A03299EBF5400024FE6 /* PRListAPIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */; };
 		1E754A07299EE10900024FE6 /* PaginatedContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */; };
+		1E754A09299EE28700024FE6 /* PRListContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A08299EE28700024FE6 /* PRListContentProvider.swift */; };
 		1EAFEF96299D379A00BC0778 /* APIResponseValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAFEF95299D379A00BC0778 /* APIResponseValidator.swift */; };
 		1EAFEF98299D3C1D00BC0778 /* RequestPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAFEF97299D3C1D00BC0778 /* RequestPerformer.swift */; };
 		1EAFEF9A299D537E00BC0778 /* APIResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAFEF99299D537E00BC0778 /* APIResponseParser.swift */; };
@@ -55,6 +56,7 @@
 		1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestQueryParams.swift; sourceTree = "<group>"; };
 		1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestManager.swift; sourceTree = "<group>"; };
 		1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedContentProvider.swift; sourceTree = "<group>"; };
+		1E754A08299EE28700024FE6 /* PRListContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListContentProvider.swift; sourceTree = "<group>"; };
 		1EAFEF95299D379A00BC0778 /* APIResponseValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseValidator.swift; sourceTree = "<group>"; };
 		1EAFEF97299D3C1D00BC0778 /* RequestPerformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPerformer.swift; sourceTree = "<group>"; };
 		1EAFEF99299D537E00BC0778 /* APIResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponseParser.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				1EB62ECE299BF8B4003E948E /* PullRequestListInteractor.swift */,
+				1E754A08299EE28700024FE6 /* PRListContentProvider.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				1EB62EC5299BE65D003E948E /* PullRequestListModule.swift in Sources */,
 				1EB62ECD299BF875003E948E /* PullRequestListViewController.swift in Sources */,
 				1EB62EEE299C297E003E948E /* JSONResponseMapper.swift in Sources */,
+				1E754A09299EE28700024FE6 /* PRListContentProvider.swift in Sources */,
 				1EAFEFA0299D576500BC0778 /* RestClient.swift in Sources */,
 				1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */,
 				1EB62ED8299C1937003E948E /* URLExtension.swift in Sources */,
