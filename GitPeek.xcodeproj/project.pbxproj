@@ -129,11 +129,11 @@
 		1E4074E3299BD531001F3937 /* GitPeek */ = {
 			isa = PBXGroup;
 			children = (
-				1E2D70F2299E3D3D0045514C /* Common */,
 				1EB62EB9299BD634003E948E /* App Startup */,
 				1EB62EBF299BD8D1003E948E /* Application Navigation */,
 				1EB62EC0299BD8DF003E948E /* Networking */,
 				1EB62EC1299BD8E9003E948E /* Utils */,
+				1E2D70F2299E3D3D0045514C /* Common */,
 				1EB62EBA299BD850003E948E /* Pull Request */,
 				1EB62EC2299BD907003E948E /* Support Files */,
 			);
