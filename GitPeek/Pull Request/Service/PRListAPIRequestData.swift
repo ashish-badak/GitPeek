@@ -11,8 +11,11 @@ struct PRListAPIRequestData: GetAPIRequestData {
     var path: String {
         "repos/\(owner)/\(repoName)/pulls"
     }
-    var queryParams: PaginatedQueryParamsProvider { .init(page: page) }
-    var parameters: Parameters { queryParams.getQueryParameters() }
+    
+    var parameters: Parameters {
+        let queryParams = PaginatedQueryParamsProvider(page: page)
+        return queryParams.data?.dictionary ?? [:]
+    }
     
     let owner: String
     let repoName: String
