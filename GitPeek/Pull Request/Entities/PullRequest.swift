@@ -17,7 +17,7 @@ struct PullRequest: Decodable {
     let mergedAt: Date?
     let closedAt: Date?
     
-    enum State: String, Codable {
+    enum State: String, Decodable {
         case open
         case closed
     }
