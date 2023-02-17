@@ -13,8 +13,9 @@ final class PullRequestListInteractor: PullRequestListInteractorProtocol {
     
     private var pullRequests: [PullRequest] = []
     
-    init(contentProvider: PaginatedContentProvider<PRListContentProvider>) {
-        self.contentProvider = contentProvider
+    init(contentProvider: PRListContentProvider) {
+        let paginatedContentProvider = PaginatedContentProvider(contentProvider: contentProvider)
+        self.contentProvider = paginatedContentProvider
     }
     
     func fetchPullRequests(completion: @escaping PaginationCallback<PullRequest>) {
