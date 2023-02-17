@@ -11,7 +11,7 @@ final class PullRequestListModule {
     func build(
         repo: String = "swift",
         owner: String = "apple",
-        pullRequestState: PullRequest.State = .closed
+        pullRequestState: PRFetchState = .closed
     ) -> UIViewController {
         /// - NOTE: Router is not created as it is not needed for current use case.
         

@@ -7,10 +7,14 @@
 
 import Foundation
 
+enum PRFetchState: String, Encodable {
+    case open, closed, all
+}
+
 final class PRListAPIRequestQueryParams: PaginationQueryParams {
-    let state: PullRequest.State?
+    let state: PRFetchState?
     
-    init(page: Int, state: PullRequest.State? = nil) {
+    init(page: Int, state: PRFetchState? = nil) {
         self.state = state
         super.init(page: page)
     }
