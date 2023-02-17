@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PullRequestListInteractor: PullRequestListInteracterProtocol {
+final class PullRequestListInteractor: PullRequestListInteractorProtocol {
     weak var presenter: PullRequestListPresenterProtocol?
     private let contentProvider: PaginatedContentProvider<PRListContentProvider>
     
