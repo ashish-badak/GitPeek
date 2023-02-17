@@ -9,7 +9,9 @@ import Foundation
 
 // - TODO: Define contracts
 
-protocol PullRequestListInteracterProtocol: AnyObject {}
+protocol PullRequestListInteractorProtocol: AnyObject {
+    func fetchPullRequests(completion: @escaping PaginationCallback<PullRequest>)
+}
 
 protocol PullRequestListPresenterProtocol: AnyObject {}
 
