@@ -11,14 +11,14 @@ final class PRListContentProvider: PaginationCompatibleContentProvider {
     typealias Item = PullRequest
     private let repo: String
     private let owner: String
-    private let pullRequestState: PullRequest.State?
+    private let pullRequestState: PRFetchState?
     let requestManager: PRListAPIRequestManager
     
     init(
         requestManager: PRListAPIRequestManager = PRListAPIRequestManager(),
         repo: String,
         owner: String,
-        pullRequestState: PullRequest.State? = nil
+        pullRequestState: PRFetchState? = nil
     ) {
         self.requestManager = requestManager
         self.repo = repo

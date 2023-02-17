@@ -20,5 +20,5 @@ struct PRListAPIRequestData: GetAPIRequestData {
     let repo: String
     let owner: String
     let page: Int
-    var state: PullRequest.State? = nil
+    var state: PRFetchState? = nil
 }

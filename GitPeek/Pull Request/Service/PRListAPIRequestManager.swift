@@ -18,7 +18,7 @@ struct PRListAPIRequestManager {
         repo: String,
         ownedBy owner: String,
         page: Int,
-        state: PullRequest.State? = nil,
+        state: PRFetchState? = nil,
         then perform: @escaping (Result<[PullRequest], Error>) -> Void
     ) {
         let requestData = PRListAPIRequestData(
