@@ -8,8 +8,26 @@
 import UIKit
 
 final class PullRequestListModule {
-    func build() -> UIViewController {
-        // - TODO: create proper view controller with required dependancies
-        return PullRequestListViewController()
+    func build(
+        repo: String = "swift",
+        owner: String = "apple",
+        pullRequestState: PullRequest.State = .closed
+    ) -> UIViewController {
+        /// - NOTE: Router is not created as it is not needed for current use case.
+        
+        let contentProvider = PRListContentProvider(
+            repo: repo,
+            owner: owner,
+            pullRequestState: pullRequestState
+        )
+        
+        let interactor = PullRequestListInteractor(contentProvider: contentProvider)
+        let presenter = PullRequestListPresenter(interactor: interactor)
+        let viewController = PullRequestListViewController(presenter: presenter)
+        
+        presenter.view = viewController
+        interactor.presenter = presenter
+        
+        return viewController
     }
 }
