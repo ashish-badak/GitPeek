@@ -19,7 +19,6 @@ struct PullRequest: Decodable {
     
     enum State: String, Codable {
         case open
-        case merged
         case closed
     }
 }
