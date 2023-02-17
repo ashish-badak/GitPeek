@@ -8,11 +8,24 @@
 import Foundation
 
 final class PullRequestListInteractor: PullRequestListInteracterProtocol {
-    // - TODO: Add dependacies: presenter
+    weak var presenter: PullRequestListPresenterProtocol?
+    private let contentProvider: PaginatedContentProvider<PRListContentProvider>
     
-    // - TODO: Define Entity modelling
+    private var pullRequests: [PullRequest] = []
     
-    // - TODO: Perform Data Fetching
+    init(contentProvider: PaginatedContentProvider<PRListContentProvider>) {
+        self.contentProvider = contentProvider
+    }
     
-    // - TODO: State Business Logic
+    func fetchPullRequests(completion: @escaping PaginationCallback<PullRequest>) {
+        contentProvider.fetchItems { [weak self] result in
+            guard let self = self else { return }
+            
+            if case .success(let items) = result {
+                self.pullRequests.append(contentsOf: items)
+            }
+            
+            completion(result)
+        }
+    }
 }
