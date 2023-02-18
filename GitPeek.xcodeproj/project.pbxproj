@@ -42,6 +42,7 @@
 		1EB62EF2299C2E6B003E948E /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB62EF1299C2E6B003E948E /* RequestBuilder.swift */; };
 		1EBBFE6929A0D4BF00B53514 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBBFE6829A0D4BF00B53514 /* UserViewModel.swift */; };
 		1EBBFE6D29A0DEE800B53514 /* DateFormattingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBBFE6C29A0DEE800B53514 /* DateFormattingExtension.swift */; };
+		1EBBFE6F29A0EE5E00B53514 /* PullRequestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBBFE6E29A0EE5E00B53514 /* PullRequestViewModel.swift */; };
 		1ED71D8529A00378005725D4 /* UIViewConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED71D8429A00378005725D4 /* UIViewConstraintExtension.swift */; };
 		1ED71D8829A00940005725D4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED71D8729A00940005725D4 /* ReusableView.swift */; };
 		1ED71D8A29A009DD005725D4 /* ReusableTableViewDequeuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED71D8929A009DD005725D4 /* ReusableTableViewDequeuing.swift */; };
@@ -85,6 +86,7 @@
 		1EB62EF1299C2E6B003E948E /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		1EBBFE6829A0D4BF00B53514 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		1EBBFE6C29A0DEE800B53514 /* DateFormattingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattingExtension.swift; sourceTree = "<group>"; };
+		1EBBFE6E29A0EE5E00B53514 /* PullRequestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestViewModel.swift; sourceTree = "<group>"; };
 		1ED71D8429A00378005725D4 /* UIViewConstraintExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConstraintExtension.swift; sourceTree = "<group>"; };
 		1ED71D8729A00940005725D4 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		1ED71D8929A009DD005725D4 /* ReusableTableViewDequeuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTableViewDequeuing.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				1EBBFE6829A0D4BF00B53514 /* UserViewModel.swift */,
+				1EBBFE6E29A0EE5E00B53514 /* PullRequestViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				1EAFEF98299D3C1D00BC0778 /* RequestPerformer.swift in Sources */,
 				1E754A07299EE10900024FE6 /* PaginatedContentProvider.swift in Sources */,
 				1EB62EF2299C2E6B003E948E /* RequestBuilder.swift in Sources */,
+				1EBBFE6F29A0EE5E00B53514 /* PullRequestViewModel.swift in Sources */,
 				1EB62EDD299C20F6003E948E /* ParameterEncoder.swift in Sources */,
 				1E2D70FB299E95640045514C /* DataExtension.swift in Sources */,
 				1EAFEF9A299D537E00BC0778 /* APIResponseParser.swift in Sources */,
