@@ -14,7 +14,7 @@ final class UserViewModel {
     
     init(user: User) {
         self.username = user.username
-        self.originalAvatarURL = user.avatarUrl
+        self.originalAvatarURL = user.avatarURL
     }
     
     func avatarURL(sizedTo size: CGFloat) -> URL? {
