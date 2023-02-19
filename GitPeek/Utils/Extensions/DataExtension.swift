@@ -6,9 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 extension Data {
     var dictionary: [String: Any]? {
         try? JSONSerialization.jsonObject(with: self) as? [String: Any]
+    }
+    
+    var image: UIImage? {
+        UIImage(data: self)
     }
 }
