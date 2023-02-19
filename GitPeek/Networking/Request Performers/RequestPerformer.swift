@@ -10,6 +10,7 @@ import Foundation
 typealias APIRequestCallback = (Result<Data, Error>) -> Void
 
 protocol RequestPerformer {
+    @discardableResult
     func perform(
         _ request: URLRequest,
         then perform: @escaping APIRequestCallback
@@ -28,6 +29,7 @@ final class DefaultRequestPerformer: RequestPerformer {
         self.responseParser = responseParser
     }
     
+    @discardableResult
     func perform(
         _ request: URLRequest,
         then perform: @escaping APIRequestCallback
