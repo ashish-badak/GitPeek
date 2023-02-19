@@ -16,6 +16,10 @@
 		1E4074EE299BD533001F3937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074ED299BD533001F3937 /* Assets.xcassets */; };
 		1E4074F1299BD533001F3937 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E4074EF299BD533001F3937 /* LaunchScreen.storyboard */; };
 		1E74906B29A2C6C4003C90E3 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906A29A2C6C4003C90E3 /* ImageError.swift */; };
+		1E74907029A2C98A003C90E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */; };
+		1E74907229A2C996003C90E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907129A2C996003C90E3 /* ImageCache.swift */; };
+		1E74907429A2CBD6003C90E3 /* ImageResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907329A2CBD6003C90E3 /* ImageResponseParser.swift */; };
+		1E74907629A2DE03003C90E3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907529A2DE03003C90E3 /* ImageStore.swift */; };
 		1E7549FF299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */; };
 		1E754A03299EBF5400024FE6 /* PRListAPIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */; };
 		1E754A07299EE10900024FE6 /* PaginatedContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */; };
@@ -61,6 +65,10 @@
 		1E4074F0299BD533001F3937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E4074F2299BD533001F3937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E74906A29A2C6C4003C90E3 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
+		1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		1E74907129A2C996003C90E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		1E74907329A2CBD6003C90E3 /* ImageResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseParser.swift; sourceTree = "<group>"; };
+		1E74907529A2DE03003C90E3 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestQueryParams.swift; sourceTree = "<group>"; };
 		1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestManager.swift; sourceTree = "<group>"; };
 		1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedContentProvider.swift; sourceTree = "<group>"; };
@@ -154,11 +162,30 @@
 				1EB62EBF299BD8D1003E948E /* Application Navigation */,
 				1EB62EC0299BD8DF003E948E /* Networking */,
 				1EB62EC1299BD8E9003E948E /* Utils */,
+				1E74906D29A2C927003C90E3 /* Storage */,
 				1E2D70F2299E3D3D0045514C /* Common */,
 				1EB62EBA299BD850003E948E /* Pull Request */,
 				1EB62EC2299BD907003E948E /* Support Files */,
 			);
 			path = GitPeek;
+			sourceTree = "<group>";
+		};
+		1E74906D29A2C927003C90E3 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				1E74906E29A2C935003C90E3 /* Image Store */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		1E74906E29A2C935003C90E3 /* Image Store */ = {
+			isa = PBXGroup;
+			children = (
+				1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */,
+				1E74907129A2C996003C90E3 /* ImageCache.swift */,
+				1E74907529A2DE03003C90E3 /* ImageStore.swift */,
+			);
+			path = "Image Store";
 			sourceTree = "<group>";
 		};
 		1EAFEF9B299D559F00BC0778 /* API Request Data */ = {
@@ -315,6 +342,7 @@
 				1EB62EED299C297E003E948E /* JSONResponseMapper.swift */,
 				1EAFEF95299D379A00BC0778 /* APIResponseValidator.swift */,
 				1EAFEF99299D537E00BC0778 /* APIResponseParser.swift */,
+				1E74907329A2CBD6003C90E3 /* ImageResponseParser.swift */,
 			);
 			path = "Response Handlers";
 			sourceTree = "<group>";
@@ -412,11 +440,14 @@
 				1E2D70F9299E95490045514C /* CodableExtension.swift in Sources */,
 				1E2D70F1299E3A390045514C /* User.swift in Sources */,
 				1EB62EEC299C296B003E948E /* ResponseMapper.swift in Sources */,
+				1E74907629A2DE03003C90E3 /* ImageStore.swift in Sources */,
 				1EB62EC7299BF113003E948E /* PullRequestModuleProtocols.swift in Sources */,
 				1E754A03299EBF5400024FE6 /* PRListAPIRequestManager.swift in Sources */,
+				1E74907429A2CBD6003C90E3 /* ImageResponseParser.swift in Sources */,
 				1E7549FF299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift in Sources */,
 				1E4074E5299BD531001F3937 /* AppDelegate.swift in Sources */,
 				1EB62ED1299BF95A003E948E /* PullRequestListPresenter.swift in Sources */,
+				1E74907229A2C996003C90E3 /* ImageCache.swift in Sources */,
 				1EBBFE6D29A0DEE800B53514 /* DateFormattingExtension.swift in Sources */,
 				1ED71D8A29A009DD005725D4 /* ReusableTableViewDequeuing.swift in Sources */,
 				1EB62EC5299BE65D003E948E /* PullRequestListModule.swift in Sources */,
@@ -435,6 +466,7 @@
 				1ED71D8529A00378005725D4 /* UIViewConstraintExtension.swift in Sources */,
 				1EB62EE1299C225B003E948E /* URLParameterEncoder.swift in Sources */,
 				1EB62EF0299C2A70003E948E /* JSONDecoderExtension.swift in Sources */,
+				1E74907029A2C98A003C90E3 /* ImageDownloader.swift in Sources */,
 				1EB62EDF299C2156003E948E /* APIRequestData.swift in Sources */,
 				1EAFEF98299D3C1D00BC0778 /* RequestPerformer.swift in Sources */,
 				1E754A07299EE10900024FE6 /* PaginatedContentProvider.swift in Sources */,
