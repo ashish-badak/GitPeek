@@ -20,6 +20,7 @@
 		1E74907229A2C996003C90E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907129A2C996003C90E3 /* ImageCache.swift */; };
 		1E74907429A2CBD6003C90E3 /* ImageResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907329A2CBD6003C90E3 /* ImageResponseParser.swift */; };
 		1E74907629A2DE03003C90E3 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907529A2DE03003C90E3 /* ImageStore.swift */; };
+		1E74907829A2DFA3003C90E3 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907729A2DFA3003C90E3 /* UIImageViewExtension.swift */; };
 		1E7549FF299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */; };
 		1E754A03299EBF5400024FE6 /* PRListAPIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */; };
 		1E754A07299EE10900024FE6 /* PaginatedContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */; };
@@ -69,6 +70,7 @@
 		1E74907129A2C996003C90E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		1E74907329A2CBD6003C90E3 /* ImageResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseParser.swift; sourceTree = "<group>"; };
 		1E74907529A2DE03003C90E3 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		1E74907729A2DFA3003C90E3 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		1E7549FE299EBADF00024FE6 /* PRListAPIRequestQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestQueryParams.swift; sourceTree = "<group>"; };
 		1E754A02299EBF5400024FE6 /* PRListAPIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PRListAPIRequestManager.swift; sourceTree = "<group>"; };
 		1E754A06299EE10900024FE6 /* PaginatedContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatedContentProvider.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				1E2D70FA299E95640045514C /* DataExtension.swift */,
 				1ED71D8429A00378005725D4 /* UIViewConstraintExtension.swift */,
 				1EBBFE6C29A0DEE800B53514 /* DateFormattingExtension.swift */,
+				1E74907729A2DFA3003C90E3 /* UIImageViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			files = (
 				1EB62EE9299C28DF003E948E /* PaginationQueryParams.swift in Sources */,
 				1EB62EE4299C2460003E948E /* APIRequestError.swift in Sources */,
+				1E74907829A2DFA3003C90E3 /* UIImageViewExtension.swift in Sources */,
 				1E2D70F9299E95490045514C /* CodableExtension.swift in Sources */,
 				1E2D70F1299E3A390045514C /* User.swift in Sources */,
 				1EB62EEC299C296B003E948E /* ResponseMapper.swift in Sources */,
