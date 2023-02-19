@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func setImage(withURL url: URL, placeholderImageName: String = "") {
+    func setImage(withURL url: URL?, placeholderImageName: String = "") {
         image = nil
         
         if !placeholderImageName.isEmpty {
@@ -17,7 +17,9 @@ extension UIImageView {
             image = placeholderImage
         }
         
-        ImageStore.shared.fetchImage(for: url) { [weak self] result in
+        guard let imageURL = url else { return }
+        
+        ImageStore.shared.fetchImage(for: imageURL) { [weak self] result in
             guard let self = self else { return }
             
             switch result {
