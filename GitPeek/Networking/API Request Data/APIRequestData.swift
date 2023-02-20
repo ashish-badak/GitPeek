@@ -14,12 +14,28 @@ protocol APIRequestData {
     var path: String { get }
     var httpMethod: HTTPMethod { get }
     
+    var extraHeaders: HTTPHeaders? { get }
     var parameters: Parameters { get }
     var encoder: ParameterEncoder { get }
 }
 
 extension APIRequestData {
     var baseURL: URL { URL.GP.baseURL }
+    var extraHeaders: HTTPHeaders? { nil }
+    
+    
+    func getHeaders() -> HTTPHeaders {
+        var allHTTPHeaders = DefaultHeaderProvider().getHeaders()
+        
+        if let extraHeaders = extraHeaders, !extraHeaders.isEmpty {
+            /// request specific headers can be provided in extraHeaders
+            /// those shall overwrite default ones
+            /// so merging by giving preference to extraHeaders (i.e. $1)
+            allHTTPHeaders = allHTTPHeaders.merging(extraHeaders) { $1 }
+        }
+        
+        return allHTTPHeaders
+    }
 }
 
 protocol GetAPIRequestData: APIRequestData {}

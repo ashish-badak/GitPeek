@@ -20,6 +20,8 @@
 		1E59D2E429A3E565000D3D5E /* PullRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2E329A3E565000D3D5E /* PullRequestView.swift */; };
 		1E59D2E629A3E627000D3D5E /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2E529A3E627000D3D5E /* ArrayExtension.swift */; };
 		1E59D2E829A4230D000D3D5E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2E729A4230D000D3D5E /* Constants.swift */; };
+		1E59D2EB29A42381000D3D5E /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2EA29A42381000D3D5E /* HTTPHeader.swift */; };
+		1E59D2ED29A423A2000D3D5E /* HTTPHeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */; };
 		1E74906B29A2C6C4003C90E3 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906A29A2C6C4003C90E3 /* ImageError.swift */; };
 		1E74907029A2C98A003C90E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */; };
 		1E74907229A2C996003C90E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907129A2C996003C90E3 /* ImageCache.swift */; };
@@ -75,6 +77,8 @@
 		1E59D2E329A3E565000D3D5E /* PullRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullRequestView.swift; sourceTree = "<group>"; };
 		1E59D2E529A3E627000D3D5E /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		1E59D2E729A4230D000D3D5E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E59D2EA29A42381000D3D5E /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderProvider.swift; sourceTree = "<group>"; };
 		1E74906A29A2C6C4003C90E3 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
 		1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1E74907129A2C996003C90E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -200,6 +204,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1E59D2E929A4236B000D3D5E /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				1E59D2EA29A42381000D3D5E /* HTTPHeader.swift */,
+				1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
 		1E74906D29A2C927003C90E3 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		1EAFEF9B299D559F00BC0778 /* API Request Data */ = {
 			isa = PBXGroup;
 			children = (
+				1E59D2E929A4236B000D3D5E /* Headers */,
 				1EB62EDB299C20D7003E948E /* Encoders */,
 				1EB62EE8299C28DF003E948E /* PaginationQueryParams.swift */,
 				1EB62ED9299C2093003E948E /* HTTPMethod.swift */,
@@ -495,12 +509,14 @@
 				1E59D2E829A4230D000D3D5E /* Constants.swift in Sources */,
 				1E754A09299EE28700024FE6 /* PRListContentProvider.swift in Sources */,
 				1EAFEFA0299D576500BC0778 /* RestClient.swift in Sources */,
+				1E59D2EB29A42381000D3D5E /* HTTPHeader.swift in Sources */,
 				1ED71D8829A00940005725D4 /* ReusableView.swift in Sources */,
 				1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */,
 				1EB62ED8299C1937003E948E /* URLExtension.swift in Sources */,
 				1E2D70ED299E190F0045514C /* PRListAPIRequestData.swift in Sources */,
 				1EAFEF96299D379A00BC0778 /* APIResponseValidator.swift in Sources */,
 				1E74906B29A2C6C4003C90E3 /* ImageError.swift in Sources */,
+				1E59D2ED29A423A2000D3D5E /* HTTPHeaderProvider.swift in Sources */,
 				1E2D70F5299E40FF0045514C /* PullRequest.swift in Sources */,
 				1EB62ECF299BF8B4003E948E /* PullRequestListInteractor.swift in Sources */,
 				1ED71D8529A00378005725D4 /* UIViewConstraintExtension.swift in Sources */,
