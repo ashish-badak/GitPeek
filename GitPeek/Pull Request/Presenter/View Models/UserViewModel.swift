@@ -10,7 +10,7 @@ import Foundation
 final class UserViewModel {
     let username: String
     private let originalAvatarURL: URL?
-    var avatarURL: URL?
+    private var avatarURL: URL?
     
     init(user: User) {
         self.username = user.username
