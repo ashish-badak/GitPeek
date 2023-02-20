@@ -11,6 +11,7 @@ import Foundation
 
 protocol PullRequestListInteractorProtocol: AnyObject {
     func fetchPullRequests(completion: @escaping PaginationCallback<PullRequest>)
+    func isPaginatedRequest() -> Bool
 }
 
 protocol PullRequestListPresenterProtocol: AnyObject {}
