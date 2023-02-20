@@ -12,6 +12,7 @@ final class UserView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.constrain(height: 40, width: 40)
+        imageView.roundCorners(radius: 20)
         return imageView
     }()
     
