@@ -41,6 +41,7 @@ class PullRequestListViewController: UIViewController {
         
         tableView.layoutConstraints(to: view)
         tableView.dataSource = self
+        tableView.delegate = self
     }
 }
 
@@ -76,5 +77,11 @@ extension PullRequestListViewController: UITableViewDataSource {
             cell.setData(viewModel)
         }
         return cell
+    }
+}
+
+extension PullRequestListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter.viewWillDisplayLastItem()
     }
 }
