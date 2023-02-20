@@ -9,12 +9,6 @@ import Foundation
 
 struct User: Decodable {
     let id: Int
-    let username: String
-    let avatarURL: URL?
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case username = "login"
-        case avatarURL = "avatar_url"
-    }
+    let login: String
+    let avatarUrl: URL?
 }
