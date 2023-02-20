@@ -18,4 +18,14 @@ final class PRListAPIRequestQueryParams: PaginationQueryParams {
         self.state = state
         super.init(page: page)
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case state
+    }
+    
+    override func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(state, forKey: .state)
+        try super.encode(to: encoder)
+    }
 }
