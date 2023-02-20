@@ -20,4 +20,9 @@ protocol PullRequestListPresenterProtocol: AnyObject {
     func getViewModel(atIndex index: Int) -> PullRequestViewModel?
 }
 
-protocol PullRequestListViewProtocol: AnyObject {}
+protocol PullRequestListViewProtocol: AnyObject {
+    func showLoading()
+    func hideLoading()
+    func showPullRequests()
+    func showError(message: String)
+}

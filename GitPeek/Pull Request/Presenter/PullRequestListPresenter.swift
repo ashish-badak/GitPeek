@@ -23,6 +23,7 @@ final class PullRequestListPresenter {
             switch result {
             case .success(let pullRequests):
                 self.buildViewModels(from: pullRequests)
+                self.view?.showPullRequests()
             case .failure(let error):
                 self.handelError(error)
             }
