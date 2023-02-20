@@ -7,13 +7,14 @@
 
 import Foundation
 
-// - TODO: Define contracts
-
 protocol PullRequestListInteractorProtocol: AnyObject {
     func fetchPullRequests(completion: @escaping PaginationCallback<PullRequest>)
     func isPaginatedRequest() -> Bool
 }
 
-protocol PullRequestListPresenterProtocol: AnyObject {}
+protocol PullRequestListPresenterProtocol: AnyObject {
+    func viewDidLoad()
+    func viewWillDisplayLastItem()
+}
 
 protocol PullRequestListViewProtocol: AnyObject {}
