@@ -31,6 +31,7 @@ final class PRListContentProvider: PaginationCompatibleContentProvider {
             repo: repo,
             ownedBy: owner,
             page: page,
+            state: pullRequestState,
             then: completion
         )
     }
