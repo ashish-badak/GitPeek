@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PullRequestListPresenter: PullRequestListPresenterProtocol {
+final class PullRequestListPresenter {
     private let interactor: PullRequestListInteractorProtocol
     weak var view: PullRequestListViewProtocol?
     
@@ -17,13 +17,6 @@ final class PullRequestListPresenter: PullRequestListPresenterProtocol {
         self.interactor = interactor
     }
     
-    func viewDidLoad() {
-        fetchPullRequests()
-    }
-    
-    func viewWillDisplayLastItem() {
-        fetchPullRequests()
-    }
     private func fetchPullRequests() {
         interactor.fetchPullRequests { [weak self] result in
             guard let self = self else  { return }
@@ -47,5 +40,15 @@ final class PullRequestListPresenter: PullRequestListPresenterProtocol {
         }
         
         // TODO: Pass error to view to display
+    }
+}
+
+extension PullRequestListPresenter: PullRequestListPresenterProtocol {
+    func viewDidLoad() {
+        fetchPullRequests()
+    }
+    
+    func viewWillDisplayLastItem() {
+        fetchPullRequests()
     }
 }
