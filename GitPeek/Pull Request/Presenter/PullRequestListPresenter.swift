@@ -51,4 +51,12 @@ extension PullRequestListPresenter: PullRequestListPresenterProtocol {
     func viewWillDisplayLastItem() {
         fetchPullRequests()
     }
+    
+    func getNumberOfViewModels() -> Int {
+        viewModels.count
+    }
+    
+    func getViewModel(atIndex index: Int) -> PullRequestViewModel? {
+        viewModels[safe: index]
+    }
 }
