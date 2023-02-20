@@ -34,6 +34,8 @@ struct RequestBuilder: URLRequestConvertible {
         )
         
         urlRequest.httpMethod = reqestData.httpMethod.rawValue
+        urlRequest.allHTTPHeaderFields = reqestData.getHeaders()
+        
         try reqestData.encoder.encode(
             urlRequest: &urlRequest,
             with: reqestData.parameters
