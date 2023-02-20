@@ -44,13 +44,7 @@ final class UserView: UIView {
         stackView.addArrangedSubview(avatarImageView)
         stackView.addArrangedSubview(titleLabel)
         addSubview(stackView)
-        stackView.layoutConstraints(
-            to: self,
-            top: .view(4),
-            leading: .view(4),
-            bottom: .view(4),
-            trailing: .view(4)
-        )
+        stackView.layoutConstraints(to: self)
     }
     
     func setData(viewModel: UserViewModel) {
