@@ -30,7 +30,7 @@ final class TableViewCell<View: CellCampatibleView>: UITableViewCell {
     
     private func setupView() {
         contentView.addSubview(view)
-        view.layoutConstraints()
+        view.layoutConstraints(to: contentView)
     }
     
     func setData(_ viewModel: View.ViewModel) {
