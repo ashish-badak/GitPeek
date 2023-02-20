@@ -29,4 +29,8 @@ final class PullRequestListInteractor: PullRequestListInteractorProtocol {
             completion(result)
         }
     }
+    
+    func isPaginatedRequest() -> Bool {
+        contentProvider.isPaginatedRequest()
+    }
 }
