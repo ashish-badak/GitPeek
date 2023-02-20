@@ -11,7 +11,7 @@ final class UserView: UIView {
     private lazy var avatarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.constrain(height: 60, width: 60)
+        imageView.constrain(height: 40, width: 40)
         return imageView
     }()
     
@@ -55,11 +55,7 @@ final class UserView: UIView {
     
     func setData(viewModel: UserViewModel) {
         titleLabel.text = viewModel.username
-        avatarImageView.setImage(
-            withURL: viewModel.avatarURL(
-                sizedTo: avatarImageView.frame.height
-            )
-        )
+        avatarImageView.setImage(withURL: viewModel.avatarURL(sizedTo: 40))
     }
 }
 
