@@ -15,6 +15,9 @@ protocol PullRequestListInteractorProtocol: AnyObject {
 protocol PullRequestListPresenterProtocol: AnyObject {
     func viewDidLoad()
     func viewWillDisplayLastItem()
+    
+    func getNumberOfViewModels() -> Int
+    func getViewModel(atIndex index: Int) -> PullRequestViewModel?
 }
 
 protocol PullRequestListViewProtocol: AnyObject {}
