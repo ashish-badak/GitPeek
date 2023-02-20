@@ -25,7 +25,7 @@ final class PullRequestViewModel {
         
         if let relativeTime = pullRequest.mergedAt?.relativeTime {
             closureTime = "Merged \(relativeTime)"
-        } else if let relativeTime = pullRequest.createdAt?.relativeTime {
+        } else if let relativeTime = pullRequest.closedAt?.relativeTime {
             closureTime = "Closed \(relativeTime)"
         } else {
             closureTime = nil
