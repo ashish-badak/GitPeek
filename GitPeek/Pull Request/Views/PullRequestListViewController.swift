@@ -11,10 +11,12 @@ class PullRequestListViewController: UIViewController {
     private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.showsVerticalScrollIndicator = false
+        tableView.showsHorizontalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(PullRequestTableViewCell.self)
         tableView.estimatedRowHeight = 150
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.tableFooterView = UIView()
         return tableView
     }()
     
@@ -73,6 +75,16 @@ extension PullRequestListViewController: PullRequestListViewProtocol {
         }
     }
     
+    func showNewPullRequests(newStartIndex: Int, newEndIndex: Int) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let indexPaths: [IndexPath] = (newStartIndex...newEndIndex).map {
+                IndexPath(row: $0, section: 0)
+            }
+            self.tableView.insertRows(at: indexPaths, with: .automatic)
+        }
+    }
+
     func showError(message: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }

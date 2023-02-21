@@ -30,11 +30,24 @@ final class PullRequestListPresenter {
             
             switch result {
             case .success(let pullRequests):
-                self.buildViewModels(from: pullRequests)
-                self.view?.showPullRequests()
+                self.handelAPIResponse(pullRequests: pullRequests, isPaginated: isPaginated)
             case .failure(let error):
                 self.handelError(error)
             }
+        }
+    }
+    
+    private func handelAPIResponse(pullRequests: [PullRequest], isPaginated: Bool) {
+        buildViewModels(from: pullRequests)
+        
+        if isPaginated {
+            let newStartIndex = viewModels.count - pullRequests.count
+            view?.showNewPullRequests(
+                newStartIndex: newStartIndex,
+                newEndIndex: viewModels.endIndex - 1
+            )
+        } else {
+            view?.showPullRequests()
         }
     }
     
