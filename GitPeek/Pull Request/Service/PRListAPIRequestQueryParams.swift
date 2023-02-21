@@ -25,7 +25,7 @@ final class PRListAPIRequestQueryParams: PaginationQueryParams {
     
     override func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(state, forKey: .state)
+        try container.encodeIfPresent(state, forKey: .state)
         try super.encode(to: encoder)
     }
 }
