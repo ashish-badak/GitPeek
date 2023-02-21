@@ -82,6 +82,9 @@ extension PullRequestListViewController: UITableViewDataSource {
 
 extension PullRequestListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        presenter.viewWillDisplayLastItem()
+        let lastItemIndex = presenter.getNumberOfViewModels() - 1
+        if lastItemIndex == indexPath.item {
+            presenter.viewWillDisplayLastItem()
+        }
     }
 }
