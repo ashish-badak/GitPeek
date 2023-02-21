@@ -74,7 +74,14 @@ extension PullRequestListViewController: PullRequestListViewProtocol {
     }
     
     func showError(message: String) {
-        // - TODO: Show Error View
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            let errorController = ErrorStateViewController(errorMessage: message)
+            self.add(
+                childViewController: errorController,
+                parentView: self.view
+            )
+        }
     }
 }
 

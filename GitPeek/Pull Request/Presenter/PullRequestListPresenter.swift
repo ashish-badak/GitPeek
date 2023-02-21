@@ -48,7 +48,11 @@ final class PullRequestListPresenter {
             return
         }
         
-        // TODO: Pass error to view to display
+        if let error = error as? APIRequestError {
+            view?.showError(message: error.description)
+        } else {
+            view?.showError(message: error.localizedDescription)
+        }
     }
 }
 
