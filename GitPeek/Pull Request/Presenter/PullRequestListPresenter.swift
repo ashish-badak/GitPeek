@@ -18,15 +18,11 @@ final class PullRequestListPresenter {
     }
     
     private func fetchPullRequests(isPaginated: Bool) {
-        if !isPaginated {
-            view?.showLoading()
-        }
+        view?.showLoading(isPaginated: isPaginated)
         
         interactor.fetchPullRequests { [weak self] result in
             guard let self = self else  { return }
-            if !isPaginated {
-                self.view?.hideLoading()
-            }
+            self.view?.hideLoading(isPaginated: isPaginated)
             
             switch result {
             case .success(let pullRequests):
