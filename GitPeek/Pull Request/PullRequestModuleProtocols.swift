@@ -24,5 +24,6 @@ protocol PullRequestListViewProtocol: AnyObject {
     func showLoading()
     func hideLoading()
     func showPullRequests()
+    func showNewPullRequests(newStartIndex: Int, newEndIndex: Int)
     func showError(message: String)
 }
