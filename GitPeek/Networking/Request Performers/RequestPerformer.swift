@@ -34,6 +34,7 @@ final class DefaultRequestPerformer: RequestPerformer {
         _ request: URLRequest,
         then perform: @escaping APIRequestCallback
     ) -> URLSessionTask {
+        request.log()
         let task = session.dataTask(with: request) { [weak self] (data, response, error)  in
             guard let self = self else { return }
             

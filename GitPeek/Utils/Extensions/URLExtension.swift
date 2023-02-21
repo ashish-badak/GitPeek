@@ -34,3 +34,11 @@ extension URLComponents {
         queryItems = existingQueryItems
     }
 }
+
+extension URLRequest {
+    func log() {
+        print("Request URL: \(url?.absoluteString ?? "")")
+        print("Request HTTP Method: \(httpMethod ?? "")")
+        print("Request Headers: \(allHTTPHeaderFields ?? [:])")
+    }
+}
