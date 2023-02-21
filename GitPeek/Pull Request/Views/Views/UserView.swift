@@ -50,7 +50,7 @@ final class UserView: UIView {
     
     func setData(viewModel: UserViewModel) {
         titleLabel.text = viewModel.username
-        avatarImageView.setImage(withURL: viewModel.avatarURL(sizedTo: 40))
+        avatarImageView.setImage(withURL: viewModel.avatarURL(sizedTo: 40), placeholderImageName: "user")
     }
 }
 
