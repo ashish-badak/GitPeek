@@ -20,9 +20,16 @@ class PullRequestListViewController: UIViewController {
         return tableView
     }()
     
-    private lazy var activityIndicatorController: ActivityStateViewController = {
-        let activityView = ActivityStateViewController()
-        return activityView
+    private lazy var loadingView: LoadingView = {
+        LoadingView(
+            frame: CGRect(
+                origin: .zero,
+                size: CGSize(
+                    width: view.frame.width,
+                    height: 100
+                )
+            )
+        )
     }()
     
     private let presenter: PullRequestListPresenterProtocol
@@ -53,19 +60,27 @@ class PullRequestListViewController: UIViewController {
 }
 
 extension PullRequestListViewController: PullRequestListViewProtocol {
-    func showLoading() {
+    func showLoading(isPaginated: Bool) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.add(
-                childViewController: self.activityIndicatorController,
-                parentView: self.view
-            )
+            
+            if isPaginated {
+                self.tableView.tableFooterView = self.loadingView
+                
+            } else {
+                self.loadingView.center = self.view.center
+                self.view.addSubview(self.loadingView)
+            }
         }
     }
     
-    func hideLoading() {
+    func hideLoading(isPaginated: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.activityIndicatorController.remove()
+            if isPaginated {
+                self?.tableView.tableFooterView = UIView()
+            } else {
+                self?.loadingView.removeFromSuperview()
+            }
         }
     }
     

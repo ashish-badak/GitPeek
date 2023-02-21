@@ -21,8 +21,8 @@ protocol PullRequestListPresenterProtocol: AnyObject {
 }
 
 protocol PullRequestListViewProtocol: AnyObject {
-    func showLoading()
-    func hideLoading()
+    func showLoading(isPaginated: Bool)
+    func hideLoading(isPaginated: Bool)
     func showPullRequests()
     func showNewPullRequests(newStartIndex: Int, newEndIndex: Int)
     func showError(message: String)
