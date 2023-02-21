@@ -13,9 +13,17 @@ final class DefaultHeaderProviderTests: XCTestCase {
     func testHeaderProvider()  {
         let headerProvider = DefaultHeaderProvider()
         let headers = headerProvider.getHeaders()
-        XCTAssertEqual(headers[HTTPHeader.authorization.key], HTTPHeader.authorization.value)
-        XCTAssertEqual(headers[HTTPHeader.apiVersion.key], HTTPHeader.apiVersion.value)
-        XCTAssertEqual(headers[HTTPHeader.contentType.key], HTTPHeader.contentType.value)
+        XCTAssertEqual(
+            headers["Authorization"],
+            "Bearer \(Constants.apiKey)"
+        )
+        XCTAssertEqual(
+            headers["Accept"],
+            "application/vnd.github+json"
+        )
+        XCTAssertEqual(
+            headers["X-GitHub-Api-Version"],
+            "2022-11-28"
+        )
     }
-
 }
