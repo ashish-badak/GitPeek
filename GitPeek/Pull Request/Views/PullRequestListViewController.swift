@@ -18,6 +18,11 @@ class PullRequestListViewController: UIViewController {
         return tableView
     }()
     
+    private lazy var activityIndicatorController: ActivityStateViewController = {
+        let activityView = ActivityStateViewController()
+        return activityView
+    }()
+    
     private let presenter: PullRequestListPresenterProtocol
     
     init(presenter: PullRequestListPresenterProtocol) {
@@ -47,17 +52,24 @@ class PullRequestListViewController: UIViewController {
 
 extension PullRequestListViewController: PullRequestListViewProtocol {
     func showLoading() {
-        // - TODO: Show activity indicator
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.add(
+                childViewController: self.activityIndicatorController,
+                parentView: self.view
+            )
+        }
     }
     
     func hideLoading() {
-        // - TODO: Hide activity indicator
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicatorController.remove()
+        }
     }
     
     func showPullRequests() {
-        // - TODO: Reload table view
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
     

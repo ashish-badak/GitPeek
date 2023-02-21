@@ -17,9 +17,17 @@ final class PullRequestListPresenter {
         self.interactor = interactor
     }
     
-    private func fetchPullRequests() {
+    private func fetchPullRequests(isPaginated: Bool) {
+        if !isPaginated {
+            view?.showLoading()
+        }
+        
         interactor.fetchPullRequests { [weak self] result in
             guard let self = self else  { return }
+            if !isPaginated {
+                self.view?.hideLoading()
+            }
+            
             switch result {
             case .success(let pullRequests):
                 self.buildViewModels(from: pullRequests)
@@ -46,11 +54,11 @@ final class PullRequestListPresenter {
 
 extension PullRequestListPresenter: PullRequestListPresenterProtocol {
     func viewDidLoad() {
-        fetchPullRequests()
+        fetchPullRequests(isPaginated: false)
     }
     
     func viewWillDisplayLastItem() {
-        fetchPullRequests()
+        fetchPullRequests(isPaginated: true)
     }
     
     func getNumberOfViewModels() -> Int {
