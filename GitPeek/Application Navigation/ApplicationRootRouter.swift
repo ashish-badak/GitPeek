@@ -21,6 +21,7 @@ final class ApplicationRootRouter {
         let module = PullRequestListModule()
         let controller = module.build()
         rootViewController.viewControllers = [controller]
+        controller.title = "Closed Pull Requests"
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
