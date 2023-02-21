@@ -23,6 +23,7 @@
 		1E59D2EB29A42381000D3D5E /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2EA29A42381000D3D5E /* HTTPHeader.swift */; };
 		1E59D2ED29A423A2000D3D5E /* HTTPHeaderProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */; };
 		1E59D2EF29A49F64000D3D5E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2EE29A49F64000D3D5E /* UIViewControllerExtension.swift */; };
+		1E59D2F229A4A1D8000D3D5E /* ActivityStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E59D2F129A4A1D8000D3D5E /* ActivityStateViewController.swift */; };
 		1E74906B29A2C6C4003C90E3 /* ImageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906A29A2C6C4003C90E3 /* ImageError.swift */; };
 		1E74907029A2C98A003C90E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */; };
 		1E74907229A2C996003C90E3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E74907129A2C996003C90E3 /* ImageCache.swift */; };
@@ -81,6 +82,7 @@
 		1E59D2EA29A42381000D3D5E /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaderProvider.swift; sourceTree = "<group>"; };
 		1E59D2EE29A49F64000D3D5E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		1E59D2F129A4A1D8000D3D5E /* ActivityStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStateViewController.swift; sourceTree = "<group>"; };
 		1E74906A29A2C6C4003C90E3 /* ImageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageError.swift; sourceTree = "<group>"; };
 		1E74906F29A2C98A003C90E3 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		1E74907129A2C996003C90E3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		1E59D2DB29A37519000D3D5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1E59D2F029A4A1BF000D3D5E /* State Controllers */,
 				1E59D2DE29A3757C000D3D5E /* TableViewCell.swift */,
 			);
 			path = Views;
@@ -213,6 +216,14 @@
 				1E59D2EC29A423A2000D3D5E /* HTTPHeaderProvider.swift */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		1E59D2F029A4A1BF000D3D5E /* State Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E59D2F129A4A1D8000D3D5E /* ActivityStateViewController.swift */,
+			);
+			path = "State Controllers";
 			sourceTree = "<group>";
 		};
 		1E74906D29A2C927003C90E3 /* Storage */ = {
@@ -517,6 +528,7 @@
 				1EB62EDA299C2093003E948E /* HTTPMethod.swift in Sources */,
 				1EB62ED8299C1937003E948E /* URLExtension.swift in Sources */,
 				1E2D70ED299E190F0045514C /* PRListAPIRequestData.swift in Sources */,
+				1E59D2F229A4A1D8000D3D5E /* ActivityStateViewController.swift in Sources */,
 				1EAFEF96299D379A00BC0778 /* APIResponseValidator.swift in Sources */,
 				1E74906B29A2C6C4003C90E3 /* ImageError.swift in Sources */,
 				1E59D2ED29A423A2000D3D5E /* HTTPHeaderProvider.swift in Sources */,
